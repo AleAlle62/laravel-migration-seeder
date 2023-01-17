@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\welcome;
+use App\Treni;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
-        $stazione_partenza = welcome::all();
-        return view('home', compact('treni'));
+        $treni = Treni::all();
+        return view('welcome', compact('treni'));
     }
 }

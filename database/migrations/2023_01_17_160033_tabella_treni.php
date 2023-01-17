@@ -13,16 +13,8 @@ class TabellaTreni extends Migration
      */
     public function up()
     {
-        Schema::create('treni', function (Blueprint $table) {
-            $table->id();
-            $table->string('azienda');
-            $table->string('stazione_partenza');
-            $table->string('stazione_arrivo');
-            $table->time('orario_partenza');
-            $table->time('orario_arrivo');
-            $table->string('codice_treno');
-            $table->integer('numero_carrozze');
-            $table->timestamps();
+        Schema::table('treni', function(Blueprint $table){
+            $table->dropColumn('discount');
         });
     }
 
