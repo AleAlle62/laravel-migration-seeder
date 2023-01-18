@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <title>TRENI</title>
 </head>
     <body>
-        @foreach ($treni as $treno)
-            <li>azienda : <h3>{{$treno->azienda}}</h3></li>
-            <li>stazione di partenza : <h3>{{$treno->stazione_partenza}}</h3></li>
-            <li>stazione di arrivo : <h3>{{$treno->stazione_arrivo}}</h3></li>
-            <li>orario di partenza : <h3>{{$treno->orario_partenza}}</h3></li>
-            <li>orario di arrivo : <h3>{{$treno->orario_arrivo}}</h3></li>
-            <li>codice treno : <h3>{{$treno->codice_treno}}</h3></li>
-            <li>numero carrozze : <h3>{{$treno->numero_carrozze}}</h3></li>
-        @endforeach
+        <div class="biglietti">
+            <h1>BIGLIETTI TRENO</h1>
+            @foreach ($treni as $treno)
+                <li>azienda : <span class="info">{{$treno->azienda}}</span></li>
+                <li>stazione di partenza : <span class="info">{{$treno->stazione_partenza}}</ class="info"></li>
+                <li>stazione di arrivo : <span class="info">{{$treno->stazione_arrivo}}</span></li>
+                <li>orario di partenza : <span class="info">{{$treno->orario_partenza}}</span></li>
+                <li>orario di arrivo : <span class="info">{{$treno->orario_arrivo}}</span></li>
+                <li>codice treno : <span class="info">{{$treno->codice_treno}}</span></li>
+                <li>numero carrozze : <span class="info">{{$treno->numero_carrozze}}</span></li>
+                <br>
+            @endforeach
+        </div>
     </body>
 </html>
 
